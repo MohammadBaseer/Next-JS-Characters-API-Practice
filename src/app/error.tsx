@@ -1,11 +1,10 @@
 "use client";
 
-import Error from "next/error";
 
 type ErrorPageProps = {
   error: Error;
   reset: () => void;
-};
+}; 
 
 const Error = ({ error, reset }: ErrorPageProps) => {
   console.log("Error:::");
