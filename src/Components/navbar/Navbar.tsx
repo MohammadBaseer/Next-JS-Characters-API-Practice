@@ -10,12 +10,12 @@ const Navbar = () => {
     <nav className={styles.container}>
       <ul className={styles.navbar}>
         <li>
-          <Link className={styles.links} href="home">
+          <Link className={styles.links} href="/home">
             Home
           </Link>
         </li>
         <li>
-          <Link className={styles.links} href={"characters"}>
+          <Link className={styles.links} href={"/characters"}>
             Characters
           </Link>
         </li>
