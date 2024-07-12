@@ -19,9 +19,9 @@ const Navbar = () => {
             Characters
           </Link>
         </li>
-        {/* <li>
-          <Link href={"/characters"}>Static Page</Link>
-        </li> */}
+        <li>
+          <Link className={styles.links} href={"/staticpage"}>Static Page</Link>
+        </li>
         {/* <li>
           <Link href={"etc"}>Hello there page</Link>
         </li> */}
