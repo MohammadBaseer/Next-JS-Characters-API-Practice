@@ -22,9 +22,12 @@ const Navbar = () => {
         <li>
           <Link className={styles.links} href={"/staticpage"}>Static Page</Link>
         </li>
-        {/* <li>
-          <Link href={"etc"}>Hello there page</Link>
-        </li> */}
+        <li>
+          <Link className={styles.links} href={"/ISR"}>ISR Page</Link>
+        </li>
+        <li>
+          <Link className={styles.links} href={"/dynamic"}>Dynamic Page</Link>
+        </li>
       </ul>
     </nav>
   );
