@@ -1,6 +1,7 @@
 "use client";
 import styles from "./Characters.module.scss"
 import { ApiResponse, Character } from "@/app/models/custom-types";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
@@ -38,17 +39,20 @@ const Characters = () => {
     // </div>
 
     <div className={styles.item_box}>
+      <p>This is <strong>CSR Client Side Component</strong>. it is Render by the browser when the url we visit the url</p>
       {characters &&
         characters.map((character) => {
           return (
             <div className={styles.item} key={character.id}>
+              
               <div className={styles.card_inner}>
                 <div className={styles.card_front}>
                   <img className={styles.item_image} src={character.image} alt="Photo" />
                 </div>
                 <div className={styles.card_back}>
                   <h1>{character.name}</h1>
-                  <button className={styles.more_btn}>Details</button>
+                    <Link className={styles.more_btn} href={`/characters/${character.name}`}>Details</Link>
+                    
                 </div>
               </div>
             </div>
