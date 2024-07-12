@@ -1,9 +1,11 @@
 import styles from "./page.module.css";
 
-export default function Home() {
+const Home = () => {
   return (
     <main className={styles.main}>
-      <h1>Welcome to Next JS</h1>
+      <h1>This is main Page</h1>
     </main>
   );
-}
+};
+
+export default Home;
