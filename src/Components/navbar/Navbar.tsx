@@ -49,6 +49,11 @@ const Navbar = () => {
             ID-3
           </Link>
         </li>
+        <li>
+          <Link className={styles.links} href={"/profile"}>
+            User Profile
+          </Link>
+        </li>
       </ul>
     </nav>
   );
