@@ -1,6 +1,5 @@
 import { Character } from "@/app/models/custom-types";
 import Image from "next/image";
-import { useRouter } from "next/router";
 
 type DynamicURLProps = {
   params: {
@@ -36,12 +35,10 @@ const singleCharacter = async ({ params: { id } }: DynamicURLProps) => {
   return (
     <div>
       <p>
-        This page one of the pages generate at build time on the server, because the final segment of the url included in the array of <strong>Static Params (generateStaticParams())</strong> if you also add <strong>dynamicParams = false </strong>, when you visit other url inside / fanPage other than the 3 contained in the array it won't display a page.
+        This page one of the pages generate at build time on the server, because the final segment of the url included in the array of <strong>Static Params &apos;(generateStaticParams())&apos;</strong> if you also add <strong>dynamicParams = false </strong>, when you visit other url inside / fanPage other than the 3 contained in the array it won&apos;t display a page.
       </p>
       <hr />
       <h2>Name: {result.name}</h2>
-      {/* <img src={result.image} alt={result.name} />
-       */}
       <Image src={result.image} alt={result.name} width={200} height={200} />
     </div>
   );
