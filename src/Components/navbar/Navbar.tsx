@@ -20,13 +20,34 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link className={styles.links} href={"/staticpage"}>Static Page</Link>
+          <Link className={styles.links} href={"/staticpage"}>
+            Static Page
+          </Link>
         </li>
         <li>
-          <Link className={styles.links} href={"/ISR"}>ISR Page</Link>
+          <Link className={styles.links} href={"/ISR"}>
+            ISR Page
+          </Link>
         </li>
         <li>
-          <Link className={styles.links} href={"/dynamic"}>Dynamic Page</Link>
+          <Link className={styles.links} href={"/dynamic"}>
+            Dynamic Page
+          </Link>
+        </li>
+        <li>
+          <Link className={styles.links} href={"/fanPage/1"}>
+            ID-1
+          </Link>
+        </li>
+        <li>
+          <Link className={styles.links} href={"/fanPage/2"}>
+            ID-2
+          </Link>
+        </li>
+        <li>
+          <Link className={styles.links} href={"/fanPage/3"}>
+            ID-3
+          </Link>
         </li>
       </ul>
     </nav>
