@@ -8,6 +8,23 @@ type DynamicURLProps = {
   };
 };
 
+//!
+export const dynamicParams = false;
+
+export async function generateStaticParams() {
+  const arrayOfId = ["1", "2", "3"];
+  return arrayOfId.map((id) => ({
+    id,
+  }));
+}
+
+export async function generateMetadata({ params: { id } }: DynamicURLProps) {
+  return {
+    title: "ID- " + id,
+    keywords: { Fun: "Cartoons" },
+  };
+}
+
 //! This is a params receiving any ID's
 const singleCharacter = async ({ params: { id } }: DynamicURLProps) => {
   console.log("ID::", id);
@@ -18,7 +35,9 @@ const singleCharacter = async ({ params: { id } }: DynamicURLProps) => {
 
   return (
     <div>
-      <p>This page rendered by ID of Character , Which ID is coming from Params</p>
+      <p>
+        This page one of the pages generate at build time on the server, because the final segment of the url included in the array of <strong>Static Params (generateStaticParams())</strong> if you also add <strong>dynamicParams = false </strong>, when you visit other url inside / fanPage other than the 3 contained in the array it won't display a page.
+      </p>
       <hr />
       <h2>Name: {result.name}</h2>
       {/* <img src={result.image} alt={result.name} />
